@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using DiagramPrinter;
+using Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Helpers;
 using Moq;
 
 namespace DiagramPrinterTests;
@@ -25,7 +26,7 @@ public class DiagramPrinterTests
 
         // Assert
         Assert.IsTrue(result);
-        
+
         string expected = "TestDiagram\nSN-123456\nTest Summary\nFakeName.png";
         Assert.AreEqual(expected, summaryText);
     }
@@ -69,6 +70,15 @@ public class DiagramPrinterTests
     // Plan:
     // Validate PrintSummary's output given IDiagram input
 
+
+    // DiagramSummary gets parameter object that contains the 4 fields that create a string.
+    // Somewhat related to loader/saver.
+    // Step 1 - Extract data object ^^^above out of diagram
+    // - Pass to summary class to get string
+
+
+    // HOWTO get going again
+    // cd csharp && dotnet test
 }
 
 
