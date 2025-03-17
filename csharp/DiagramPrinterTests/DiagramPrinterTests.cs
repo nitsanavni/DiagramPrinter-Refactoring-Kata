@@ -20,5 +20,6 @@ public class DiagramPrinterTests
         var output = "";
         var result = printer.PrintSummary(null, "swedish", ref output);
         Assert.IsFalse(result);
+        Assert.IsEmpty(output);
     }
 }
