@@ -34,7 +34,7 @@ public class DiagramPrinter
             var targetFilename = GetTargetFilename(folder, filename);
             return diagram.FlowchartAsPdf().CopyFile(info.FullFilename, targetFilename, true);
         }
-        
+
         if (info.FileType == "Spreadsheet")
         {
             var targetFilename = GetTargetFilename(folder, filename);
@@ -43,7 +43,7 @@ public class DiagramPrinter
             return diagram.FlowchartDataAsSpreadsheet().CopyFile(info.FullFilename, targetFilename, true);
         }
         // imagine lots more code here to deal with other types of document
-        
+
         return false;
     }
 
